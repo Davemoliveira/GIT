@@ -1,2 +1,2 @@
-# Git
+# GIT
 Source control with GIT
