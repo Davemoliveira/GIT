@@ -1,1 +1,122 @@
 SOURCE CODE WITH GIT - MAIN NOTES
+================================================================================================================================================
+Install on RHEL
+	yum install git
+	git --version | 
+	which git > confirm its install
+	man git
+	dnf install git > Fedora distros
+
+Install on DEBIAN
+	apt-get install git
+	git --version
+	man git
+
+================================================================================================================================================
+	UNDERSTAND GIT FS
+
+	.git directory = configuration file + all info to track files
+
+	Files are added to Staging area > Git add
+
+	When edited, file moves to master branch \ others
+	Typical GIT Repo listing
+
+	- commit_editmsg: 
+	- Head(txt) > Current branch we working info
+	- config = repo configuration file
+	- Description file (name of repo)
+	- hooks - scripts for automation
+	- index - Tracks items on the index area ready to commit
+	- info - items that git will ignore (example)
+	- logs contains log files on activity on repo
+	- objects >DB compressed files that have commmited (hash versiosn)
+	- refs: refences files and folders tags for branches and tags of the repos
+
+================================================================================================================================================
+CREATE LOCAL REPO
+
+git init new_repo = new_repo/.git
+git init /dir/path
+Creates working directory
+Existing directory
+	git init /dir/
+git bare
+	Initializes a bare git repo for larger projects, contains no working area
+	git init --bare largerproject.git
+	The output is the core folders and filess are on the root/work dir instead of the .git folder when doing the normal git init. We use this mainly for projects that have branches for projects coming in from different people.
+
+================================================================================================================================================
+USING 'GIT CONFIG [File = .gitconfig]
+git config > cmd to config elements on the git env
+	git config --global user.name "Dave J Oliveira" > To set configuration for all of our projects and set identity
+	git config --global user.email "Davi.jorge@gmail.com"
+	git config --global core.editor "/usr//bin/vim" > Setting default text editor when working on text files
+git config --list > view config info for the git env
+man git-config > local docs
+
+
+For specific projects (not all as above) and we set a different username or email:
+	access the folder[working directory] and user normal config cmd: git config user.email "brand_new_email@example.com"
+	when accessing the the config env by git config --list, we will get 2 emails, but git will use the last line of the doc as reference.
+	checking ^ is correct? git config user.email > will return the email "brand_new_email@example.com"
+	if we leave the working directory, it will use the email that we set on our global configuration file.
+	Config further options, man page
+
+================================================================================================================================================
+ADDING FILES TO A PROJECT
+git add > add files to a git project [adds to the index file] to be tracked on the staging area
+git status > Check what files are on the staging area (not commited yet)
+git rm > removes file from a project
+
+empty folders are not displayed on git status | only files but it will show the path when it's added.
+HOWEVER, if we want to add a folder: touch folder/.keep | git add folder/.keep
+
+Remove file: git rm -f file.txt it removes from the staging area and physical directory. :/
+
+================================================================================================================================================
+THE STATUS OF YOUR PROJECT
+git status -s > Output in short version [files added] \ ??=file not tracked | A = file added | M=unstaged file(e.g modified) > need the file again
+git status -v > Ouput verbose [including what changed on the file]
+man git-status > Man page of this command
+
+================================================================================================================================================
+GIT COMMIT
+
+
+
+
+
+
+
+
+
+
+================================================================================================================================================
+GITLAB (What is)?
+
+Simialr to Github, but we can host it ourselves - web based interface to manage projects repos and user/group access
+We can install on a server or deploy as a container
+
+It comes in 2 types: Enterprise and Community edition
+Components include:
+- Git
+- NGINX > Web server component
+- Posttgree SQL for DB backend
+-Chef for configuration management of the server itself
+- redis: used for an in-memory DB system and other tools (created by gitlabs itself)
+
+================================================================================================================================================
+
+DOWNLOAD/INSTALL/CONFIG FOR LOCAL  (Requires Linux)
+
+
+================================================================================================================================================
+
+
+
+
+================================================================================================================================================
+NEXT STEPS
+Courses DevOps line \ Jenkings \ 
+
