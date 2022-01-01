@@ -130,41 +130,39 @@ TRACKING REMOTE REPOSITORIES
 ============================================================================================================================================
 git remote -v > Shows remote servers that are being tracked for the current repository and their last stats.
 git fetch > Fetch new commit info down from remote server for the current repository - does not commit anything to the local database
+Generate pub private key: ssh-keygen > cat [tilda/.ssh/id_rsa.pub > Copy public key - Paste under profile on Github
+git clone git@github.com:linuxacademy/content-source-control-git.git < 
+git remote |  origin= URL alias from the project came from \ -v sees the url | More detail: git remote show origin 
+git fetch origin > To keep track of remote server changes. Anything that is new on the remote repo gets pulled down to the local copy
+Be aware that what we pull down by the fetch command is not part of of the local repository until we merge it.
+git pull > Allows to see if we are up to date and attempt to automatically merge on anything that we dont have. 
 
-
-
-GITLAB
+PUSHING TO REMOTE REPOSITORIES
 ============================================================================================================================================
-Allows local hosting, web-interface to manage repositories and user/group access. Install on server / deploy as container.
-Components: git, NGINX(webserver), PostgreeSQL(backend DB), Chef(server configuration management), Redit(in-memory DB), others
+git push -u <remote> <local branch> > Pushes local changes to the upstream git reposity
+Good practice is to push to a new branch instead of the master branch for projects that we dont control
 
-Install: Follow the instructions within the official website [www.gitlabl.com]
-
-
-
-
-
+PULL REQUESTS
+============================================================================================================================================
+All on github interface | with confirm pull request > confirm merge
 
 QUIZ
-================================================================================================================================================
-<ONE: If a system global config variable [user.name] is already set on local system, info is under ~/.gitconfig [not ./.gitconfig]>
-<TWO: git commit -m - Will commit staged files and apply comments.>
+============================================================================================================================================
+<ONE:  If a system global config variable [user.name] is already set on local system, info is under ~/.gitconfig [not ./.gitconfig]>
+<TWO:  git commit -m - Will commit staged files and apply comments.>
 <THREE Create new branch from point lcal repo - create and swithc to branch: git checkout -b branch_name>
-<FOUR User password is never captured during any git event>
-<FIVE Protocols to clone a project from a remote repository is HTTPS and GIT://>
-
-DOWNLOAD/INSTALL/CONFIG FOR LOCAL  (Requires Linux)
-
+<FOUR  User password is never captured during any git event>
+<FIVE  Protocols to clone a project from a remote repository is HTTPS and GIT://>
+<SIX   FOrk is a clone of a project, so to create a new project fork we use git clone >
+<SEVEN Full requestes are designed to be initiated by the GIT CLIENT and completed by the REPOSITORY ADMIN >
 
 NEXT STEPS
 ================================================================================================================================================
 Courses on DevOps line/paths | Jenkings | Containers | 
 
+TESTING
 ================================================================================================================================================
-
-TEST
-
-- Read the man page for git commit -a | Test this further on how it works
-- Review folders and their functionality
-- Git add all files within a folder instead of single ones
-- Test the file backups that end with ~
+- <Read the man page for git commit -a | Test this further on how it works				>
+- <Review folders and their functionality												>
+- <Git add all files within a folder instead of single ones 							>
+- <Test the file backups that end with ~												>
