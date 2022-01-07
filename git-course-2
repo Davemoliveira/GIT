@@ -58,4 +58,35 @@ URL: https://learn.acloud.guru/course/3cae1b05-a7da-4e6b-8332-cf58ebf9498b/overv
 
 					- git push origin master (Push commit to github)
 					- git config -l (Check origin branch)
-					
+
+====================================================================================================================================================
+								  GIT LOG
+					- git log (Prints info on commits and changes on a repository)
+					- git log -p (Abreaviate change log list)
+					- git log --<filename> | git log online <filename> (Look at specific file info)
+
+					- git graph (Graph printed)
+					- git decorate (Useful for multiple branches)
+					- / search for patterns on git | n/N = next/previous (Similar to man pages)
+
+====================================================================================================================================================
+								  BRANCHES
+					- git branch <name> (Create branch)
+					- git checkout <branch name> (Start to work in a new branch)
+					- git checkout -b <branch name> (Create and switch the new branch)
+
+====================================================================================================================================================
+								  MERGING | PUSHING
+					- git push origin --all (Push branch to origin)
+					- git merge <target_branch>
+					- git branch -R (View all remote branches)
+					- git branch -A (View local and remote branches)			
+
+
+
+
+
+
+
+
+
