@@ -1,2 +1,61 @@
 2ND course: GIT QUICK START
 URL: https://learn.acloud.guru/course/3cae1b05-a7da-4e6b-8332-cf58ebf9498b/overview
+
+=====================================================================================================================================================
+								  INTRO TO GIT
+
+					GIT manages content snapshots, checksums(small-sized block of data) and metadata
+					to track files change. Each state is a COMMIT, the current commit is HEAD.
+					Commits are affiliated with REPOSITORIES and BRANCHES. OBS: HEAD can move 
+					between commits
+
+					 ---------				 ---------	
+					| COMMIT  |				| COMMIT  | < -- (HEAD)
+					 ---------				 ---------	
+					 	|						 |
+					 	|						 v
+ 					 ---------	  Change	 ---------
+					| CONTENT | ---------->	| CONTENT |
+					 ---------				 ---------
+					 	
+=====================================================================================================================================================
+								  INSTALL AND CONFIGURATION
+					- git (checks git instal)
+					- git config -L (Configuration lists - values set)
+					- git config --global  user.name
+					- git config --global  user.email
+					- git config --system core.editor vi
+
+					- cat ~/.gitconfig (Home directory of user, containing values)
+					- cat etc/gitconfig (System wide configurations)
+					- .git/config /.config/git/config (Global configurations)
+
+=====================================================================================================================================================
+								  WORKING WITH REPOSITORIES
+					- git status (Tracks info files within the directory)
+					- git add file.txt
+					- git add . (Adds all directory files)
+					- git commit -m "Adding file.txt within the repository."
+
+					- git reset HEAD <file> (Unstange files)
+					- gir rm <file> (Remove file no longer required)
+					- git commit -m "File removed!"
+
+					- git checkout --<file> (Ignore modified file)
+
+=====================================================================================================================================================
+								  MANAGE TRACKING
+					- .gitignore (repository local/ system global), contains files that git will ignore
+					- vim .gitignore (Create the file to add the files to be ignored by git)
+					- git config --global core.executable <path> (Exclude specific paths)
+
+====================================================================================================================================================
+								  CLONING
+					- git clone <original path> <clone_repo_localtion>
+					- git log (View changes)
+					- git clone \ user@server:config-repo_path <local clone> (SSH)
+					- git clone https://github.com/x.git (GITHUB)
+
+					- git push origin master (Push commit to github)
+					- git config -l (Check origin branch)
+					
